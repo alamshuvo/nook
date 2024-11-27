@@ -254,3 +254,6 @@ function switchTab(tabName) {
 // Initialize with 'sofa' tab active on page load
 switchTab("sofa");
 
+
+
+  

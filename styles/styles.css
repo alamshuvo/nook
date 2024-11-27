@@ -18,7 +18,10 @@ body{
     --white: #ffffff;
     --secondary: #02494B;
 }
-
+::selection {
+    background: #02494B; /* Vibrant pink background */
+    color: #fff;         /* White text color */
+  }
 .img {
     width: 100%;
 }
@@ -314,24 +317,31 @@ body{
 /* Style the marquee container */
 .marquee {
     overflow: hidden;
-    white-space: nowrap;
     width: 100%;
     background-color: var(--white);
     padding: 31px 0 31px;
     border-bottom: 1px solid rgb(109, 115, 115);
+   
 }
 
 /* Inner content styling */
 .marquee-content {
     padding-left: 100%;
     gap: 2rem;
-    animation: scroll 40s linear infinite;
+    animation: scroll 120s linear infinite;
+    white-space: nowrap;
+    display: inline-flex;
+    
 }
 
 .marquee-wrapper {
     gap: 1rem;
     color: rgb(109, 115, 115);
     font-size: 1.4rem;
+    white-space: nowrap;
+}
+.marquee-content:hover {
+    animation-play-state: paused;
 }
 
 /* slider section start*/
@@ -503,7 +513,7 @@ body{
 .arrow-svg-button {
     border: none;
     background-color: white;
-
+  cursor: pointer;
 }
 
 .arrow-svg {
@@ -795,7 +805,9 @@ footer {
     background-color: var(--secondary);
     color: var(--white);
     border: none;
+   cursor: pointer;
 }
+
 
 .end-footer {
     margin: 16px 0 16px 0;
